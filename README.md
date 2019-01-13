@@ -1,3 +1,7 @@
+# Alpha blog tutorial
+
+A blog with multiple users, blogs, categories, etc. For training purpose.
+
 # README
 
 This README would normally document whatever steps are necessary to get the
