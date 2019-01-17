@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       # no validation error
-      flash[:notice] = "Article was successfully created"
+      flash[:success] = "Article was successfully created"
       # redirect_to article_path(@article) # this redirects to show action
 
       puts "ALVIN >>> #{article_path(@article)}" # /articles/:id
@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      flash[:notice] = "Article was successfully updated"
+      flash[:success] = "Article was successfully updated"
       redirect_to article_path(@article)
     else
       render 'edit'
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
   def destroy
     title = @article.title
     @article.destroy
-    flash[:notice] = "Article: '#{title}' was successfully deleted"
+    flash[:danger] = "Article: '#{title}' was successfully deleted"
     redirect_to articles_path
   end
 
