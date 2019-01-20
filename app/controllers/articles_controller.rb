@@ -16,7 +16,15 @@ class ArticlesController < ApplicationController
     # form_builder.submit (in new.html.erb) directs here
     # below line, not rendering template but instead checking the params from article
     # render plain: params[:article].inspect
+
+    # byebug
+    # debugger
+
     @article = Article.new(article_params)
+
+    # temporary hard coded user
+    @article.user = User.first
+
     if @article.save
       # no validation error
       flash[:success] = "Article was successfully created"
