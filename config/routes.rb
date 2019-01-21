@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   # overwrite the /user/new path to /signup
   get 'signup', to: 'users#new'
   resources :users, except: :new
+
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
 end
