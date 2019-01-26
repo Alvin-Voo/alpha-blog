@@ -10,4 +10,8 @@ class ActiveSupport::TestCase
   def sign_in_as(user, password)
     post login_path, params: {session: {email: user.email, password: password}}
   end
+
+  def sign_up_as(user, password)
+    post users_path, params: {user: {username: user.username, email: user.email, password: password}}
+  end
 end

@@ -1,5 +1,13 @@
+# whatever is in the fixtures means its in the test db
+
 admin:
   username: 'admin'
   email: 'admin@admin.com'
   password_digest: <%= BCrypt::Password.create('password') %>
   admin: true
+
+john:
+  username: 'johndoe'
+  email: 'john@doe.com'
+  password_digest: <%= BCrypt::Password.create('password') %>
+  admin: false

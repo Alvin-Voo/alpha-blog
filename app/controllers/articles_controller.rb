@@ -31,8 +31,10 @@ class ArticlesController < ApplicationController
       flash[:success] = "Article was successfully created"
       # redirect_to article_path(@article) # this redirects to show action
 
-      puts "ALVIN >>> #{article_path(@article)}" # /articles/:id
-      puts "ALVIN >>> #{article_params}" # this shows the params {"title"=>"", description => ""}
+      # /articles/:id
+      # puts "ALVIN >>> #{article_path(@article)}" 
+      # this shows the params {"title"=>"", description => ""}
+      # puts "ALVIN >>> #{article_params}" 
       redirect_to action: "show", id: @article.id
     else
       render 'new'

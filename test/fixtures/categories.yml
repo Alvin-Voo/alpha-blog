@@ -1,0 +1,11 @@
+sport:
+  id: 1
+  name: 'sport'
+
+books:
+  id: 2
+  name: 'books'
+
+lifestyle:
+  id: 3
+  name: 'lifestyle'
